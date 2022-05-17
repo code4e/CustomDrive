@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>First Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/
+font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <!-- buttons etc -->
+        <button id="btnAddFolder">Add Folder</button>
+        <button id="btnAddTextFile">Add Text File</button>
+        <button id="addAlbum">Add Album</button>
+    </div>
+    <div id="breadCrumb">
+        <!-- to show where we are -->
+        <a purpose="path" rid="-1">Root</a>
+
+    </div>
+    <div id="container">
+        <!-- to show all files and folders -->
+
+
+    </div>
+    <div id="app" display="normal">
+        <!-- to show the apps, in a pop up later on -->
+        <div id="app-title-bar">
+            <div id="app-title">
+                Title will appear here
+            </div>
+            <div id="win-actions">
+                <span class="material-icons" id="minimize">
+                    minimize
+                </span>
+                <span class="material-icons" id="maximize">
+                    fullscreen
+                </span>
+                <span class="material-icons" id="close">
+                    cancel
+                </span>
+            </div>
+        </div>
+
+        <div id="app-menu-bar" display="normal">
+
+        </div>
+
+        <div id="app-body" display="normal">
+
+        </div>
+
+    </div>
+    <template id="templates">
+        <div class="folder" rid="" pid="">
+            <div class="actionContainer">
+                <span action="view">
+                    <i class="fa fa-folder-open" aria-hidden="true"></i>
+                </span>
+                <span action="rename">
+                    <i class='fas fa-user-edit'></i>
+                </span>
+                <span action="delete">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+
+                </span>
+            </div>
+            <div purpose="name"></div>
+        </div>
+
+
+        <div class="text-file" rid="" pid="">
+            <div class="actionContainer">
+                <span action="view">
+                    <i class="fas fa-book-open"></i>
+                </span>
+                <span action="rename">
+                    <i class='fas fa-user-edit'></i>
+                </span>
+                <span action="delete">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+
+                </span>
+            </div>
+            <div purpose="name"></div>
+        </div>
+
+        <div class="album" rid="" pid="">
+            <div class="actionContainer">
+                <span class="material-icons" action="view">
+                    launch
+                </span>
+
+                <span action="rename">
+                    <i class='fas fa-user-edit'></i>
+                </span>
+                <span action="delete">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div purpose="name"></div>
+
+        </div>
+
+        <a purpose="path" rid="-1"></a>
+
+        <div purpose="notepad-menu" class="notepad-menu">
+            <span action="save" class="material-icons">
+                save
+            </span>
+            <span action="bold" class="material-icons" pressed="false">
+                format_bold
+            </span>
+            <span action="italic" class="material-icons" pressed="false">
+                format_italic
+            </span>
+            <span action="underline" class="material-icons" pressed="false">
+                format_underlined
+            </span>
+            <input type="color" action="bg-color">
+            <input type="color" action="fg-color">
+            <select action="font-family">
+                <option value="serif">serif</option>
+                <option value="sans-serif">sans-serif</option>
+                <option value="monospace">monospace</option>
+                <option value="fantasy">fantasy</option>
+                <option value="cursive">cursive</option>
+            </select>
+            <select action="font-size">
+                <option value="8">8</option>
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+                <option value="22">22</option>
+                <option value="24">24</option>
+                <option value="26">26</option>
+                <option value="28">28</option>
+                <option value="30">30</option>
+            </select>
+            <span class="material-icons" action="download">
+                download
+            </span>
+            <input type="file" action="upload">
+
+        </div>
+        <div purpose="notepad-body" class="notepad-body">
+            <textarea>iiiii</textarea>
+        </div>
+        <div purpose="album-menu" class="album-menu">
+            <span class="material-icons" action="save">save</span>
+            <span class="material-icons" action="upload">upload</span>
+            <span class="material-icons" action="download">download</span>
+            <span class="material-icons" action="add">add</span>
+            <span class="material-icons" action="delete">delete</span>
+            <span class="material-icons" action="left">keyboard_double_arrow_left</span>
+            <span class="material-icons" action="right">keyboard_double_arrow_right</span>
+            <span class="material-icons" action="play">play_circle_filled</span>
+            <span class="material-icons" action="pause">pause</span>
+
+        </div>
+        <div purpose="album-body" class="album-body">
+            <div purpose="picture-list">
+                
+            </div>
+            <div purpose="picture-view">
+                <div class="move-left">
+                    <span class="material-icons">
+                        keyboard_arrow_left
+                    </span>
+                </div>
+                <div class="picture-main">
+                    
+                </div>
+                <div class="move-right">
+                    <span class="material-icons">
+                        keyboard_arrow_right
+                    </span>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script type="module" src="./main.js"></script>
+   
+</body>
+
+</html>
